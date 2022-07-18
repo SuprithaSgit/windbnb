@@ -1,6 +1,6 @@
 import './CountDisplay.css';
 import { useState } from 'react';
-import PersonCount from './Counter';
+import PersonCount from './PersonCount';
 
 function CountDisplay() {
 	const [adultCount, setAdultCount] = useState(0);

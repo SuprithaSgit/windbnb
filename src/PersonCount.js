@@ -1,4 +1,4 @@
-import './Counter.css';
+import './PersonCount.css';
 
 const PersonCount = (props) => {
 	return (
