@@ -7,14 +7,11 @@ button {
 	border-radius: 0.3rem;
 	border: 0.5px solid grey;
 }
+
 .counter {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin: 2rem 0;
-}
-h4 {
-	text-align: left;
-	margin-bottom: 0%;
 }

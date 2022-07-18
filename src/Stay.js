@@ -1,9 +1,10 @@
 import './Stay.css';
+
 const Stay = (props) => {
 	return (
-		<div className="cont">
+		<div className="stay_cont">
 			<img src={props.stay.img} alt="stay"></img>
-			<div className="Rat-cat">
+			<div className="stay_desc">
 				<p>{props.stay.category}</p>
 				<p>{props.stay.rating}⭐</p>
 			</div>

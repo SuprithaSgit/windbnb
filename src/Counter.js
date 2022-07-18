@@ -1,10 +1,11 @@
 import './Counter.css';
-const Counter = (props) => {
+
+const PersonCount = (props) => {
 	return (
 		<div className="counter">
-			<h4>{props.counter.name}</h4>
-			<p>{props.counter.desc}</p>
-			<div className="coufunc">
+			<h4>{props.selectCategory.name}</h4>
+			<p>{props.selectCategory.desc}</p>
+			<div>
 				<button onClick={props.increment}> + </button>
 				{props.count}
 				<button onClick={props.decrement}> - </button>
@@ -13,4 +14,4 @@ const Counter = (props) => {
 	);
 };
 
-export default Counter;
+export default PersonCount;

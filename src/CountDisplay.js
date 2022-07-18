@@ -1,10 +1,11 @@
 import './CountDisplay.css';
 import { useState } from 'react';
-import Counter from './Counter';
+import PersonCount from './Counter';
+
 function CountDisplay() {
-	let [count, setCount] = useState(0);
-	let [count1, setCount1] = useState(0);
-	const counter = [
+	const [adultCount, setAdultCount] = useState(0);
+	const [childCount, setChildCount] = useState(0);
+	const selectCategory = [
 		{
 			name: 'Adults',
 			desc: 'Ages 13 or above',
@@ -14,39 +15,39 @@ function CountDisplay() {
 			desc: 'Ages 2 - 12',
 		},
 	];
-	const incrementHandler = () => {
-		setCount((count) => count + 1);
+	const addAdult = () => {
+		setAdultCount((prevAdultCount) => prevAdultCount + 1);
 	};
-	const decrementHandler = () => {
-		if (count === 0) count = 0;
-		else setCount((count) => count - 1);
+	const removeAdult = () => {
+		setAdultCount((adultCount) =>
+			adultCount > 0 ? adultCount - 1 : (adultCount = 0)
+		);
 	};
-	const incrementHandler1 = () => {
-		setCount1((count1) => count1 + 1);
+	const addChildren = () => {
+		setChildCount((prevChildCount) => prevChildCount + 1);
 	};
-	const decrementHandler1 = () => {
-		if (count1 === 0) count1 = 0;
-		else setCount1((count1) => count1 - 1);
+	const removeChildren = () => {
+		setChildCount((childCount) =>
+			childCount > 0 ? childCount - 1 : (childCount = 0)
+		);
 	};
 	return (
 		<div>
-			<div className="container">
-				<h6>Guests</h6> {count1 + count} guests
+			<div className="count_display">
+				<h6>Guests</h6> {childCount + adultCount} guests
 			</div>
-			<div className="count-class">
-				<Counter
-					count={count}
-					key={Math.random()}
-					increment={incrementHandler}
-					decrement={decrementHandler}
-					counter={counter[0]}
+			<div>
+				<PersonCount
+					count={adultCount}
+					selectCategory={selectCategory[0]}
+					increment={addAdult}
+					decrement={removeAdult}
 				/>
-				<Counter
-					count={count1}
-					key={Math.random()}
-					counter={counter[1]}
-					increment={incrementHandler1}
-					decrement={decrementHandler1}
+				<PersonCount
+					count={childCount}
+					selectCategory={selectCategory[1]}
+					increment={addChildren}
+					decrement={removeChildren}
 				/>
 			</div>
 		</div>

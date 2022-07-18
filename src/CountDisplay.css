@@ -1,11 +1,10 @@
-.container {
-	text-align: left;
+.count_display {
 	border: 2px solid rgb(66, 66, 66);
 	border-radius: 0.5rem;
 	width: 35%;
 	padding: 0.5rem 0.3rem;
 }
+
 h6 {
 	text-transform: uppercase;
-	font-weight: 800;
 }

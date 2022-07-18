@@ -1,18 +1,21 @@
-.cont {
+.stay_cont {
 	width: 90%;
 	margin: 1rem 0 2rem 0;
 }
-.Rat-cat {
+
+.stay_desc {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 img {
 	width: 100%;
 	border-radius: 1.2rem;
 	object-fit: cover;
+	height: auto;
 }
+
 p {
-	text-align: left;
 	text-transform: capitalize;
 }
